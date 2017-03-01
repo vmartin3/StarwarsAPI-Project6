@@ -1,11 +1,3 @@
-//
-//  DetailViewController.swift
-//  Project6 -APIs
-//
-//  Created by Vernon G Martin on 2/9/17.
-//  Copyright © 2017 Vernon G Martin. All rights reserved.
-//
-
 import UIKit
 
 extension Array{
@@ -39,6 +31,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var englishButton: UIButton!
     //MARK: - Picker Wheel
     @IBOutlet weak var itemPicker: UIPickerView!
+    //MARK: - Exchange rate 
     @IBOutlet weak var exchangeRateField: UITextField!
     @IBOutlet weak var conversionButton: UIButton!
     

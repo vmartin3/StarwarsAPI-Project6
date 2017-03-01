@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Xcode7Starter
-//
-//  Created by Pasan Premaratne on 10/25/16.
-//  Copyright © 2016 Treehouse Island, Inc. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -49,6 +41,7 @@ class ViewController: UIViewController {
         case StarshipSegue
     }
     
+    //Allows for ViewDidLoad Data Fetching code to only run once
     struct Static {
         static var token: dispatch_once_t = 0
     }
@@ -56,8 +49,8 @@ class ViewController: UIViewController {
     func fetchStarwarsCharacterData(){
         swapiClient.fetchStarwarsCharacterData(EntityOptions.Characters) { (result) in
             switch result{
-            case .Success(let starwarsDetails): break
-            case .Failure(let error as NSError): break
+            case .Success(let starwarsDetails): print("Success")
+            case .Failure(let error as NSError): print("Error")
             default: break
             }
         }
@@ -66,8 +59,8 @@ class ViewController: UIViewController {
     func fetchStarwarsVehiclesData(){
         swapiClient.fetchStarwarsVehicleData(EntityOptions.Vehicles) { (result) in
             switch result{
-            case .Success(let vehicleDetails): break
-            case .Failure(let error as NSError): break
+            case .Success(let vehicleDetails): print("Success")
+            case .Failure(let error as NSError): print("Error")
             default: break
             }
         }
@@ -76,8 +69,8 @@ class ViewController: UIViewController {
     func fetchStarwarsStarshipData(){
         swapiClient.fetchStarwarsStarshipData(EntityOptions.Starships) { (result) in
             switch result{
-            case .Success(let starwarsDetails): break
-            case .Failure(let error as NSError): break
+            case .Success(let starwarsDetails): print("Success")
+            case .Failure(let error as NSError): print("Error")
             default: break
             }
         }

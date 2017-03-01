@@ -1,11 +1,3 @@
-//
-//  Starships.swift
-//  Project6 -APIs
-//
-//  Created by Vernon G Martin on 2/5/17.
-//  Copyright © 2017 Vernon G Martin. All rights reserved.
-//
-
 import Foundation
 
 //Array holding all characters and their details
@@ -23,7 +15,6 @@ extension StarshipWrapper: JSONDecodableTopLevel {
             for starship in starshipDictionary {
                 let starwarsStarship = EntityDetails(JSON: starship, type: .Starships)
                 allStarships.append(starwarsStarship!)
-            //FIXME: print(starwarsStarship?.make)
             }
         }
     }
